@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+crossorigin="anonymous">
+
+<body>
+  
+    <div class="container" id="header">
+        <header class="alert alert-danger" style="text-align: center; padding: 30px;">SIMPLE SHOPPING CART - 1972519</header>
+        <hr>
+       <div class="CartItem"> 
+        <header class="alert alert-success" style="text-align: center; padding: 10px;">YOUR CART</header>
+      
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      
+       
+       </div>
+    <table class="table table-bordered" id="cart">
+        <thead class="thead-light">
+            <tr scope="row">
+                <th scope="col" style="width:20px;" >Number</th>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                
+            </tr>
+        </thead>
+        <tbody id="Roe">
+
+        </tbody>
+ </table>
+
+  <hr />
+  <br /> <br />
+    SUB-TOTAL  :   <input type="text" id="subtotal" value="0" readonly > <br /> 
+    TAX ( 4.5 % ) :  <input type="text" id="tax" value="0" readonly >  <br /> 
+    TOTAL :  <input type="text" id="total" value="0" readonly > 
+
+    
+
+</body>
+<script src="check.js"></script>
+<script type="text/javascript">
+window.onload = getdata(); // important: without braces
+</script>
+</html>

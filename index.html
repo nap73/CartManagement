@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container" id="header">
+         <header class="alert alert-danger" style="text-align: center; padding: 30px;">SIMPLE SHOPPING CART - 1972519</header>
+         <hr>
+        <div class="CartItem"> 
+         Cart Items : <input type="text" id="cart1" class="CartI" value="0"  readonly>
+         Cart Value : <input type="text" id="cart2" class="CartI" value="0"  readonly >
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+        <input type="button" value="Checkout" class="btn alert-danger" onclick="checkout()" >
+        </div>
+        <hr>
+         <table class="table table-bordered" id="CART">
+            <thead class="thead-light">
+                <tr scope="row">
+                    <th scope="col">Id</th>
+                    <th scope="col" style="height: 5px; width: 5px;">Image</th>
+                    <th scope="col">Item Name</th>
+                    <th scope="col">Price ( $ )</th>
+                    <th scope="col">Buy</th>
+                    
+                </tr>
+            </thead>
+        
+            <tbody>
+                <tr id="1">
+                       <td>1</td>
+                       <td><img src="1.jpg"></td>
+                       <td class="row-data">Apple</td>
+                        <td class="row-data">10</td>
+                       <td><input type="button" value="add to cart" onclick="show()" ></td>
+                </tr>
+
+                <tr id="2">
+                    <td>2</td>
+                    <td><img src="2.jpg"></td>
+                    <td class="row-data">Banana</td>
+                    <td class="row-data">5</td>
+                    <td><input type="button" value="add to cart" onclick="show()" ></td>
+             </tr>
+             <tr id="3">
+                <td>3</td>
+                <td><img src="3.jpg"></td>
+                <td class="row-data">Bread</td>
+                <td class="row-data">2.75</td>
+                <td><input type="button" value="add to cart" onclick="show()" ></td>
+             </tr>
+            <tr id="4">
+                <td>4</td>
+                <td><img src="4.jpg"></td>
+                <td class="row-data">Cake</td>
+                <td class="row-data">15</td>
+                <td><input type="button" value="add to cart" onclick="show()" ></td>
+        </tr>
+                <tr id="5">
+                    <td>5</td>
+                    <td><img src="5.jpg"></td>
+                    <td class="row-data">Cheese</td>
+                    <td class="row-data">25</td>
+                    <td><input type="button" value="add to cart" onclick="show()" ></td>
+            </tr>
+            <tr id="6">
+                <td>6</td>
+                <td><img src="6.jpg"></td>
+                <td class="row-data">Cookies</td>
+                <td class="row-data">1.80</td>
+                <td><input type="button" value="add to cart" onclick="show()" ></td>
+            </tr>
+            <tr id="7">
+                <td>7</td>
+                <td><img src="7.jpg"></td>
+                <td class="row-data">Watermelon</td>
+                <td class="row-data">6</td>
+                <td><input type="button" value="add to cart" onclick="show()" ></td>
+            </tr>
+            <tr id="8">
+                <td>8</td>
+                <td><img src="8.jpg"></td>
+                <td class="row-data">Grapes</td>
+                <td class="row-data">4</td>
+                <td><input type="button" value="add to cart" onclick="show()" ></td>
+            </tr>
+            <tr id="9">
+                <td>9</td>
+                <td><img src="9.jpg"></td>
+                <td class="row-data">Milk</td>
+                <td class="row-data">3.75</td>
+                <td><input type="button" value="add to cart" onclick="show()" ></td>
+            </tr>
+            <tr id="10">
+                <td>10</td>
+                <td><img src="10.jpg"></td>
+                <td class="row-data">Oil</td>
+                <td class="row-data">12</td>
+                <td><input type="button" value="add to cart" onclick="show()" ></td>
+            </tr>
+            <tr id="11">
+                <td>11</td>
+                <td><img src="11.jpg"></td>
+                <td class="row-data">Water</td>
+                <td class="row-data">6</td>
+                <td><input type="button" value="add to cart" onclick="show()" ></td>
+            </tr>
+
+
+    
+            </tbody>
+
+        </table>
+
+    </div>
+
+</body>
+
+<script type="text/javascript">
+  
+  function show() {
+
+  
+    var rowId = event.target.parentNode.parentNode.id;
+    var data = document.getElementById(rowId).querySelectorAll(".row-data"); 
+    var obj = {};
+    obj.item = data[0].innerHTML ;
+    obj.price = data[1].innerHTML;
+ 
+
+    inLogic(obj);
+
+        
+}
+
+</script>
+<script src="index.js"></script>
+</html>
